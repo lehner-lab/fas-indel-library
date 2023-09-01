@@ -3,21 +3,11 @@ setwd("/omics/groups/OE0433/internal/pablo/projects/sandbox/illumina/")
 
 library(tidyverse)
 
-
-
-
 load("hmm_hidden_states_split_by_exon.RData")
 load("hmm_exon_lengths.RData")
 
 
-
-
-
-
 load("001_master_bed_table_exons_in_80pcnt_samples_with_refseqs_and_psiVals.RData")
-
-
-
 
 # only look at exons of length 50-150
 # which(grepl(pattern = "FAS", x = bed_file_exons_in_80_pcnt_of_samples$exon_id) & bed_file_exons_in_80_pcnt_of_samples$length == 63)
@@ -29,15 +19,7 @@ bed_file_exons_in_80_pcnt_of_samples <- bed_file_exons_in_80_pcnt_of_samples[idx
 my_exons <- bed_file_exons_in_80_pcnt_of_samples$exon_id
 
 
-
-
-
-
 wt_psi_vector <- c()
-
-
-
-
 
 
 for (i in 1:length(my_exons)) {
