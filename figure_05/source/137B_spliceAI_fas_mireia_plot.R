@@ -111,3 +111,10 @@ my_plot
 dev.off()
 
 
+write_delim(x = tibble(start = vector_starts,
+                       end = vector_ends,
+                       dPSI = vector_delta_psi),
+            file = "137B_figure_05b_spliceai.tsv",
+            delim = "\t")
+
+
